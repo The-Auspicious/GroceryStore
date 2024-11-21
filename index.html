@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon" >
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="checkLogin()">
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Grocery Store Logo" class="logo">
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="login.html" onclick="logout()" class="logout-btn">Logout</a>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <h2 style="text-align: center;">Welcome to Grocery Store</h2>
+            <p style="text-align: center;">Discover the freshest produce and best deals here!</p>
+        </section>
+        <section id="products">
+            <h2 style="text-align: center;">Products</h2>
+            <input type="text" id="search-bar" placeholder="Search products..." onkeyup="filterProducts()">
+            <div class="product-list" id="product-list">
+                <!-- Product Card Component -->
+                <div class="product-card" data-name="Apple" data-category="Fruit" data-brand="BrandA">
+                    <img src="images/apple.jpg" alt="Apple" class="product-image">
+                    <h3 class="product-name">Apple</h3>
+                    <p class="product-price">$1.00</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(1)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Banana" data-category="Fruit" data-brand="BrandB">
+                    <img src="images/banana.jpg" alt="Banana" class="product-image">
+                    <h3 class="product-name">Banana</h3>
+                    <p class="product-price">$0.50</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(2)">Add to Cart</button>
+                </div>
+                <!-- Add more product cards as needed -->
+                <div class="product-card" data-name="Kiwi" data-category="Fruit" data-brand="BrandC">
+                    <img src="images/kiwi.jpg" alt="Kiwi" class="product-image">
+                    <h3 class="product-name">Kiwi</h3>
+                    <p class="product-price">$2.00</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(3)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Mango" data-category="Fruit" data-brand="BrandD">
+                    <img src="images/mango.jpg" alt="Mango" class="product-image">
+                    <h3 class="product-name">Mango</h3>
+                    <p class="product-price">$3.00</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(4)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Grapes" data-category="Fruit" data-brand="BrandE">
+                    <img src="images/grapes.jpg" alt="Grapes" class="product-image">
+                    <h3 class="product-name">Grapes</h3>
+                    <p class="product-price">$2.50</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(5)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Mashroom" data-category="Veggies" data-brand="BrandE">
+                    <img src="images/mashrooms.jpg" alt="Mashroom" class="product-image">
+                    <h3 class="product-name">Mashroom</h3>
+                    <p class="product-price">$1.50</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(6)">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-name="spinach" data-category="Veggies" data-brand="BrandE">
+                    <img src="images/spinach.jpg" alt="Spinach" class="product-image">
+                    <h3 class="product-name">Spinach</h3>
+                    <p class="product-price">$0.75</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(7)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Peas" data-category="Veggies" data-brand="BrandE">
+                    <img src="images/peas.jpg" alt="Peas" class="product-image">
+                    <h3 class="product-name">Peas</h3>
+                    <p class="product-price">$1.75</p>
+                    <button class="add-to-cart-btn" onclick="addToCart(8)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h2 style="text-align: center;">About Us</h2>
+            <p style="text-align: justify;">
+                We believe in supporting our local community and preserving the environment.
+                That's why we source our produce from nearby farms, reducing our carbon footprint and ensuring you get the freshest, most flavorful produce.
+                At Grocery Store, we're dedicated to providing an exceptional shopping experience. Our friendly staff is always on hand to assist you in finding the perfect produce. 
+                We're committed to your satisfaction, and we strive to make every visit a delightful one.
+            </p>
+        </section>
+        <section id="contact">
+            <h2 style="text-align: center;">Contact</h2>
+            <p style="text-align: center;">Get in touch with us for any queries:
+                <br>
+            <br>Grocery Store
+                <br>123 Main Street, Pune, India.
+                <br>Phone: 123-456-7890
+                <br>Email: grocery.store@store.com
+                <br>Hours: Mon-Sat, 9am-9pm
+            </p>
+            <p></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Grocery Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Toaster Message Container -->
+    <div id="toaster" class="toaster"></div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
