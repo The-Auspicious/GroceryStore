@@ -1,6 +1,6 @@
 # Grocery Store
 
-This project is a simple web-based grocery store application. It allows users to browse products, add them to a cart, and purchase them. Check out running application with this Url: https://the-auspicious.github.io/GroceryStore/
+This project is a simple web-based grocery store application. Application is fully developed using genAI. It allows users to browse products, add them to a cart, and purchase them. Check out running application with this Url: https://the-auspicious.github.io/GroceryStore/
 
 ## Features
 
