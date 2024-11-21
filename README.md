@@ -1,7 +1,6 @@
-# GroceryStore
 # Grocery Store
 
-This project is a simple web-based grocery store application. It allows users to browse products, add them to a cart, and purchase them. The application also includes user authentication and a notification system.
+This project is a simple web-based grocery store application. It allows users to browse products, add them to a cart, and purchase them. Check out running application with this Url: https://the-auspicious.github.io/GroceryStore/
 
 ## Features
 
