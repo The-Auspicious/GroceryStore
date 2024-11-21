@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Grocery Store Logo" class="logo">
+        </div>
+        <nav class="header-nav">
+            <h3>Grocery Store Login</h3>
+        </nav>
+    </header>
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form" onsubmit="return validateLogin()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <button type="button" onclick="showSignUpModal()">Sign up</button></p>
+            <p id="login-message"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Grocery Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignUpModal()">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form" onsubmit="return createUser()">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="signup-message"></p>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="spinner" style="display: none;"></div>
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
